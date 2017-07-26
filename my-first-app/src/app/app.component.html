@@ -1,3 +1,15 @@
 <!--The whole content below can be removed with the new code.-->
-<h2>Hello Sample Application</h2>
+<div class="container">
 
+	<div class="row">
+		<div class="col-xs-12">
+			<p>Add a button assignment</p>
+			<hr>
+			<!-- <button class="btn btn-primary" (click)="showSecret = !showSecret">Toggle Display</button> -->
+			<button class="btn btn-primary" (click)="onToggleDisplay()">Toggle Display</button> <span *ngIf="showSecret">Secret Password = "tuna"</span>
+			
+			<div *ngFor="let logItem of log"> {{logItem}} </div>
+		</div>
+	</div>
+
+</div>

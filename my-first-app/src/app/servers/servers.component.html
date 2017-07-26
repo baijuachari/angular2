@@ -1,0 +1,27 @@
+<h1>I am in the App Servers </h1>
+<hr/>
+<div class="container">
+    <div>
+        <input type="text" class="form-control" [(ngModel)]="serverName">
+        <p>{{ serverName }}</p>
+    </div>
+    <div class="row">
+        <button class="btn btn-primary" [disabled]="!allowNewServer" 
+        (click)="onCreateServer()">Add Servers</button>
+        <!-- <p> {{ serverCreationStatus }} </p> -->
+        <p *ngIf="serverCreated">Server was created, server name is {{serverName}}</p>
+        
+        
+        <app-server *ngFor="let server of servers"></app-server>
+    </div>
+    <!-- <hr/>
+    <div>
+        <div>
+            <input type="text" class="form-control" [(ngModel)]="sampleName" (input)="setButton()">
+        </div>
+
+        <div>
+            <button class="btn btn-primary" [disabled]="isDisabled" (click)="onClearClicked()">Clear</button>
+        </div>
+    </div> -->
+</div>
